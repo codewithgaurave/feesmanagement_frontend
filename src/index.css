@@ -1,0 +1,1060 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium fonts for crystal clear readability */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/* DataTables Integration */
+@import './datatables.css';
+
+* {
+  font-family: 'Nunito', 'Outfit', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Clear heading fonts */
+h1, h2, h3, .heading-font {
+  font-family: 'Outfit', 'Nunito', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+/* Crystal clear body text */
+body, p, span, div {
+  font-family: 'Nunito', 'Outfit', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.005em;
+  color: #1f2937;
+}
+
+/* Ensure text is always visible */
+.text-white {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-gray-900 {
+  color: #111827 !important;
+}
+
+.text-gray-800 {
+  color: #1f2937 !important;
+}
+
+.text-gray-700 {
+  color: #374151 !important;
+}
+
+.text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+.text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* Sharp UI elements */
+button, .btn, input, select, textarea {
+  font-family: 'Nunito', 'Outfit', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-size: 0.95rem;
+}
+
+/* Logo and brand text */
+.brand-font {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Navigation and menu items */
+.nav-font {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Enhanced transitions */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-smooth {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.transition-bounce {
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Simple color scheme gradients */
+.college-gradient {
+  background: #93c5fd !important;
+  color: #1e40af !important;
+}
+
+.college-gradient-light {
+  background: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+/* Premium typography styles */
+.text-elegant {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+.text-modern {
+  font-family: 'Montserrat', 'Nunito', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+}
+
+.text-professional {
+  font-family: 'Poppins', 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+.text-crystal {
+  font-family: 'Nunito', 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.015em;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-sharp {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.text-display {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+/* Responsive text scaling */
+.text-responsive {
+  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  line-height: 1.6;
+}
+
+.heading-responsive {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.3;
+}
+
+/* Mobile-first responsive utilities */
+.container-responsive {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Responsive spacing utilities */
+.space-responsive {
+  margin: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.padding-responsive {
+  padding: clamp(0.75rem, 3vw, 2rem);
+}
+
+/* Responsive button sizing */
+.btn-responsive {
+  padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+/* Responsive card sizing */
+.card-responsive {
+  padding: clamp(1rem, 4vw, 2rem);
+  border-radius: clamp(0.5rem, 2vw, 1rem);
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 1023px) {
+  .mobile-nav-item {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .mobile-nav-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* Touch-friendly interactive elements */
+@media (hover: none) and (pointer: coarse) {
+  button, .btn, a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  input, select, textarea {
+    min-height: 44px;
+  }
+  
+  /* Mobile sidebar touch improvements */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Responsive table improvements */
+@media (max-width: 1023px) {
+  .table-responsive {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .table-mobile-card {
+    display: block;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Responsive grid improvements */
+.grid-responsive-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid-responsive-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-responsive-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Responsive flex utilities */
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .flex-responsive {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/* Responsive sidebar */
+@media (max-width: 1023px) {
+  .sidebar-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 16rem;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sidebar-mobile.open {
+    transform: translateX(0);
+  }
+  
+  /* Ensure mobile sidebar is above everything */
+  .fixed.z-50 {
+    z-index: 9999 !important;
+  }
+  
+  /* Mobile overlay */
+  .fixed.inset-0.z-40 {
+    z-index: 9998 !important;
+  }
+}
+
+/* Responsive form improvements */
+@media (max-width: 639px) {
+  .form-responsive {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-responsive .form-group {
+    width: 100%;
+  }
+  
+  .form-responsive input,
+  .form-responsive select,
+  .form-responsive textarea {
+    width: 100%;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Responsive modal improvements */
+@media (max-width: 639px) {
+  .modal-responsive {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+  }
+}
+
+/* Responsive image scaling */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive video scaling */
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Enhanced card effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Simple color scheme buttons */
+button {
+  font-weight: 500 !important;
+  text-shadow: none !important;
+}
+
+.bg-blue-400, .bg-blue-500 {
+  background-color: #93c5fd !important;
+  color: #1e40af !important;
+}
+
+.bg-green-400, .bg-green-500 {
+  background-color: #bbf7d0 !important;
+  color: #166534 !important;
+}
+
+.bg-red-500 {
+  /*background-color: #000000 !important;*/
+  color: #ffffff !important;
+}
+
+.bg-yellow-500 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.bg-purple-500 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.bg-gray-500 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+/* Ensure table text is visible */
+table th {
+  color: #374151 !important;
+  font-weight: 600 !important;
+}
+
+table td {
+  color: #1f2937 !important;
+}
+
+/* Simple color scheme status badges */
+.bg-green-100 {
+  background-color: #bbf7d0 !important;
+}
+
+.text-green-800 {
+  color: #166534 !important;
+}
+
+.bg-red-100 {
+  /*background-color: #000000 !important;*/
+}
+
+.text-red-800 {
+  color: #ffffff !important;
+}
+
+.bg-yellow-100 {
+  background-color: #dbeafe !important;
+}
+
+.text-yellow-800 {
+  color: #1e40af !important;
+}
+
+.bg-blue-100 {
+  background-color: #dbeafe !important;
+}
+
+.text-blue-800 {
+  color: #1e40af !important;
+}
+
+/* Text glow effect for headings */
+.text-glow {
+  text-shadow: 0 0 20px rgba(0, 168, 204, 0.3);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #00a8cc 0%, #0077b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Focus states for better accessibility */
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  color: #1f2937 !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+/* Input field text visibility */
+input, select, textarea {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Sidebar text visibility */
+.nav-font {
+  color: inherit !important;
+  font-weight: 500 !important;
+}
+
+/* Gradient backgrounds with proper text contrast */
+.bg-gradient-to-r {
+  color: #ffffff !important;
+}
+
+.bg-gradient-to-br {
+  color: #ffffff !important;
+}
+
+.bg-gradient-to-b {
+  color: #ffffff !important;
+}
+
+/* Remove button outlines */
+button:focus,
+.btn:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* SweetAlert button focus */
+.swal2-confirm:focus,
+.swal2-cancel:focus,
+.swal2-deny:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Optimized print styles */
+@media print {
+  * {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    color: #000000 !important;
+  }
+  
+  body * {
+    visibility: hidden;
+  }
+  
+  .print-area, .print-area * {
+    visibility: visible;
+  }
+  
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  svg {
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+  }
+  
+  @page {
+    margin: 0.5in;
+    size: A4;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .text-auto {
+    color: #f8fafc;
+  }
+  
+  .bg-auto {
+    background-color: #1e293b;
+  }
+}
+
+/* Force visibility for critical text elements */
+.text-critical {
+  color: #111827 !important;
+  font-weight: 500 !important;
+  text-shadow: none !important;
+}
+
+.text-white-force {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Card content visibility */
+.bg-white {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+.bg-gray-50 {
+  background-color: #f9fafb !important;
+  color: #1f2937 !important;
+}
+
+.bg-gray-100 {
+  background-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+}
+
+/* Ensure all text in cards is visible */
+.rounded-xl, .rounded-2xl, .rounded-lg {
+  color: #1f2937;
+}
+
+/* Login form text visibility */
+.bg-white\/95 {
+  color: #1f2937 !important;
+}
+
+/* Statistics cards text */
+.text-2xl, .text-3xl {
+  font-weight: 700 !important;
+  color: inherit !important;
+}
+
+/* Small text visibility */
+.text-sm {
+  color: inherit !important;
+  font-weight: 400 !important;
+}
+
+.text-xs {
+  color: inherit !important;
+  font-weight: 500 !important;
+}
+
+/* SVG Icons - Natural colors */
+svg {
+  color: inherit;
+  fill: currentColor;
+  stroke: currentColor;
+  opacity: 0.8;
+}
+
+button svg {
+  color: inherit;
+  opacity: 0.8;
+}
+
+button:hover svg {
+  opacity: 1;
+}
+
+/* Text color overrides for better visibility */
+.text-gray-400 {
+  color: #6b7280 !important;
+}
+
+.text-gray-500 {
+  color: #4b5563 !important;
+}
+
+.text-gray-600 {
+  color: #374151 !important;
+}
+
+.text-gray-700 {
+  color: #1f2937 !important;
+}
+
+.text-gray-800 {
+  color: #111827 !important;
+}
+
+.text-gray-900 {
+  color: #030712 !important;
+}
+
+/* Specific component fixes */
+.bg-white\/80 {
+  color: #1f2937 !important;
+}
+
+.bg-white\/50 {
+  color: #1f2937 !important;
+}
+
+/* Backdrop blur elements */
+.backdrop-blur-sm {
+  color: #1f2937 !important;
+}
+
+/* Gradient text fixes */
+.from-slate-50.to-blue-50 {
+  color: #1f2937 !important;
+}
+
+/* Stats card text */
+.font-semibold {
+  color: inherit !important;
+  font-weight: 600 !important;
+}
+
+.font-medium {
+  /* color: inherit !important; */
+  font-weight: 500 !important;
+}
+
+.font-bold {
+  color: inherit !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure all text elements have proper contrast */
+h1, h2, h3, h4, h5, h6 {
+  color: #111827 !important;
+  font-weight: 600 !important;
+}
+
+p {
+  color: #374151 !important;
+}
+
+span {
+  color: inherit !important;
+}
+
+/* Link colors */
+a {
+  color: #3b82f6 !important;
+}
+
+a:hover {
+  color: #1d4ed8 !important;
+}
+
+/* Active states */
+.bg-gradient-to-r.from-\[\#00a8cc\].to-\[\#0077b6\] {
+  color: #ffffff !important;
+}
+
+.bg-gradient-to-r.from-\[\#00a8cc\].to-\[\#0077b6\] svg {
+  color: #ffffff !important;
+}
+
+/* Hover states for sidebar */
+.hover\:bg-slate-700\/50:hover {
+  color: #ffffff !important;
+}
+
+.hover\:bg-slate-700\/50:hover svg {
+  color: #ffffff !important;
+}
+
+/* Loading spinner visibility */
+.animate-spin {
+  color: inherit !important;
+  opacity: 1 !important;
+}
+
+/* Print button icons */
+.no-print {
+  display: none !important;
+}
+
+@media print {
+  svg {
+    color: #000000 !important;
+  }
+}
+
+/* Utility classes for better visibility */
+.text-visible {
+  color: #111827 !important;
+  opacity: 1 !important;
+}
+
+.text-white-visible {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  opacity: 1 !important;
+}
+
+.icon-visible {
+  color: inherit !important;
+  opacity: 1 !important;
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+.icon-white {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.icon-dark {
+  color: #111827 !important;
+  opacity: 1 !important;
+  fill: #111827 !important;
+  stroke: #111827 !important;
+}
+
+/* Force visibility for all interactive elements */
+button, a, input, select, textarea {
+  opacity: 1 !important;
+}
+
+button svg, a svg {
+  opacity: 1 !important;
+  color: inherit !important;
+}
+
+/* Specific component overrides */
+.sidebar-text {
+  color: #cbd5e1 !important;
+}
+
+.sidebar-text.active {
+  color: #ffffff !important;
+}
+
+.sidebar-icon {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
+}
+
+.sidebar-icon.active {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Card text visibility */
+.card-text {
+  color: #1f2937 !important;
+}
+
+.card-text-light {
+  color: #6b7280 !important;
+}
+
+/* Button text and icon visibility */
+.btn-primary {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+.btn-primary svg {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.btn-success {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+.btn-success svg {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.btn-danger {
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+}
+
+.btn-danger svg {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.btn-warning {
+  background-color: #f59e0b !important;
+  color: #ffffff !important;
+}
+
+.btn-warning svg {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Table visibility */
+.table-header {
+  color: #374151 !important;
+  font-weight: 600 !important;
+}
+
+.table-cell {
+  color: #1f2937 !important;
+}
+
+.table-icon {
+  color: inherit !important;
+  opacity: 1 !important;
+}
+
+/* Status badge visibility */
+.status-paid {
+  background-color: #dcfce7 !important;
+  color: #166534 !important;
+}
+
+.status-pending {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+}
+
+.status-overdue {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+}
+
+/* Form element visibility */
+.form-input {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+}
+
+.form-input::placeholder {
+  color: #6b7280 !important;
+}
+
+.form-label {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+/* Navigation visibility */
+.nav-link {
+  color: #cbd5e1 !important;
+  transition: all 0.2s ease !important;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+}
+
+.nav-link.active {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #00a8cc 0%, #0077b6 100%) !important;
+}
+
+.nav-link svg {
+  color: inherit !important;
+  opacity: 1 !important;
+}
+
+/* Header visibility */
+.header-text {
+  color: #1f2937 !important;
+}
+
+.header-time {
+  color: #374151 !important;
+}
+
+.header-date {
+  color: #6b7280 !important;
+}
+
+/* Footer visibility */
+.footer-text {
+  color: #6b7280 !important;
+}
+
+/* Loading spinner visibility */
+.spinner {
+  color: inherit !important;
+  opacity: 1 !important;
+}
+
+/* Print visibility */
+@media print {
+  .text-visible,
+  .text-white-visible,
+  .icon-visible,
+  .icon-white,
+  .icon-dark {
+    color: #000000 !important;
+    opacity: 1 !important;
+  }
+  
+  svg {
+    color: #000000 !important;
+    fill: #000000 !important;
+    stroke: #000000 !important;
+    opacity: 1 !important;
+  }
+}
+/* SweetAlert z-index fix */
+.swal2-container {
+  z-index: 99999 !important;
+}
+
+.swal2-popup {
+  z-index: 99999 !important;
+}
+
+.swal2-backdrop-show {
+  z-index: 99998 !important;
+}
+
+/* Remove icon contrast globally */
+* svg {
+  opacity: 0.5 !important;
+}
+
+button svg, a svg {
+  opacity: 0.5 !important;
+}
+
+button:hover svg, a:hover svg {
+  opacity: 0.7 !important;
+}
