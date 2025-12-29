@@ -241,7 +241,7 @@ const StudentFeeDetails = () => {
               </div>
               <div>
                 <span className="text-xs sm:text-sm text-gray-500">Speciality</span>
-                <p className="font-medium text-gray-900 text-sm sm:text-base">{student.section || student.speciality}</p>
+                <p className="font-medium text-gray-900 text-sm sm:text-base">{student.section || (typeof student.speciality === 'object' ? student.speciality?.name : student.speciality) || 'N/A'}</p>
               </div>
             </div>
           ) : (
